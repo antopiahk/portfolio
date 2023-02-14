@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
       bilbo: ["Bilbo Swash Caps"],
-      ubuntu: ["Ubuntu"]
+      ubuntu: ["Ubuntu"],
+      'sans': ["Source Code Pro"]
       },
       spacing: {
         '110': '27.5rem',
@@ -22,7 +23,8 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         slideDown: "slideDown 5s ease-in-out 1",
-        scroll: "scroll 5s ease-in-out"
+        scroll: "scroll 5s ease-in-out",
+        blink: "blink 2s ease-in-out infinite",
       },
       keyframes: {
         wiggle: {
@@ -36,7 +38,12 @@ module.exports = {
         },
         scroll: {
           '0%': {transform: 'translateY(0%)'},
-          '100%': {transform:'translateY(100%)'}
+          '100%': {transform:'translateY(100%)', }
+        },
+        blink: {
+          '0%': {opacity: 1},
+          '50%': {opcaity: 0},
+          '100%': {opcaity: 1},
         }
       },
       
@@ -181,5 +188,6 @@ module.exports = {
   },
   safelist: ["*"],
   plugins: [
+    require("tailwindcss-animation-delay"),
   ],
 };

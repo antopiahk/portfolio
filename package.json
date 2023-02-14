@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "tailwind-children": "^0.5.0",
+    "tailwindcss-animation-delay": "^1.0.7",
     "trunk": "^1.1.0"
   },
   "devDependencies": {
