@@ -1,0 +1,3 @@
+[submodule "lorc"]
+	path = lorc
+	url = https://github.com/Futino/lorc
