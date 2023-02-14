@@ -18,6 +18,27 @@ use crate::components::atoms::HeaderColor;
 #[function_component()]
 pub fn P(props: &Props) -> Html {
     match props.color {
+        HeaderColor::Primary => {
+            html! {
+                <div class={format!("p-3 text-xl text-primary-light dark:text-primary-dark {}",props.class)}>
+                    {for props.children.iter()}
+                </div>
+            }
+        }
+        HeaderColor::Secondary => {
+            html! {
+                <div class={format!("p-3 text-xl text-secondary-light dark:text-secondary-dark {}",props.class)}>
+                    {for props.children.iter()}
+                </div>
+            }
+        }
+        HeaderColor::Tertiary => {
+            html! {
+                <div class={format!("p-3 text-xl text-tertiary-light dark:text-tertiary-dark {}",props.class)}>
+                    {for props.children.iter()}
+                </div>
+            }
+        }
         HeaderColor::OnPrimary => {
             html! {
                 <div class={format!("p-3 text-xl text-primary-on-light dark:text-primary-on-dark {}",props.class)}>

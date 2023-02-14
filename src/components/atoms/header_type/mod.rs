@@ -2,6 +2,10 @@
 // Instead of "text-background-on-light dark:text-background-on-dark", we can just do <H1 color=HeaderColor::OnBackground>""
 #[derive(PartialEq)]
 pub enum HeaderColor {
+    Primary,
+    Secondary,
+    Tertiary,
+
     OnPrimary,
     OnSecondary,
     OnTertiary,
