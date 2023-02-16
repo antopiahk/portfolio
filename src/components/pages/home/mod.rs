@@ -18,33 +18,39 @@ impl Component for Home {
         html! {
             <>
                 <div class="py-40 px-4 border-b shadow-2xl sm:px-6 md:px-8 border-primary-light/40 dark:border-primary-dark/40">
-                    <div class="mx-40 my-40">
-                    
-                        <H3 class="text-left font-code p-12">
-                            {"hey, my name is "}
-                            <span class="inline-flex animate-ping px-1">
-                                <svg height="4" width="4">
-                                    <circle  cx="2" cy="2" r="2" stroke-width="0" fill="white" />
-                                </svg>
-                                
-                            </span>
-                            <span class="inline-flex animate-ping animation-delay-500 px-1">
-                                <svg height="4" width="4">
-                                    <circle  cx="2" cy="2" r="2" stroke-width="0" fill="white" />
-                                </svg>
-                            </span>
-                            <span class="inline-flex animate-ping animation-delay-1000 px-1">
-                                <svg height="4" width="4">
-                                    <circle  cx="2" cy="2" r="2" stroke-width="0" fill="white" />
-                                </svg>
-                            </span>
-                        </H3>
-                        <H1 class="text-left font-bold p-6" color={HeaderColor::Primary}>
-                            {"JORGE LEWIS"}
-                        </H1>
-                        <H2 class="text-left p-12">
-                            {"i develop "} <span class="text-primary-light dark:text-primary-dark">{"webapps"} </span>
-                        </H2>
+                    <div class="flex flex-row my-40">
+                        <div class="flex flex-col max-w-xs justify-center">
+                            <H3 class="text-center -my-[24px] font-light opacity-50">
+                                {"<>"}
+                            </H3>
+                            <Icon class="mx-auto opacity-50" icon={IconType::Line} height="300" width="2" color="white"/>
+                            <H3 class="text-center -my-[24px] font-light opacity-50">
+                                {"<>"}
+                            </H3>
+                        </div>
+                        <div class="flex flex-col my-auto">
+                            <H3 class="text-left font-code p-12">
+                                {"hey, my name is "}
+                                <span class="animate-blink">
+                                    {"."}
+                                </span>
+                                <span class="animate-blink animation-delay-300">
+                                    {"."}
+                                </span>
+                                <span class="animate-blink animation-delay-600">
+                                    {"."}
+                                </span>
+                            </H3>
+                            <H1 class="text-left font-bold p-6" color={HeaderColor::Primary}>
+                                {"Jorge Lewis"}
+                                <span class="inline-flex animate-blink duration-2000 align-middle">
+                                    <Icon icon={IconType::Line} color="white" height="60" width="3"/>
+                                </span>
+                            </H1>
+                            <H2 class="text-left p-12">
+                                {"i develop "} <span class="text-primary-light dark:text-primary-dark">{"webapps"} </span>
+                            </H2>
+                        </div>
                     </div>
                 </div>
             </>

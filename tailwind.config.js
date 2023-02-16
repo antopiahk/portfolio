@@ -40,10 +40,10 @@ module.exports = {
           '0%': {transform: 'translateY(0%)'},
           '100%': {transform:'translateY(100%)', }
         },
-        blink: {
-          '0%': {opacity: 1},
-          '50%': {opcaity: 0},
-          '100%': {opcaity: 1},
+        blink: {   
+          '49.99%': {opacity: '1'},
+          '50%': {opacity: '0'},
+          
         }
       },
       
